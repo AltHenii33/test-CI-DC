@@ -1,21 +1,22 @@
-name: GitHub Actions Demo
+name: Node.js CI
+
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+      - main
+
 jobs:
-  init:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Staring Node.js 18.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-      - name: install modules
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
         run: npm install
-      - name: build project
+
+      - name: Build
         run: npm run build
-      - name: unit test
-        run: npm test
+
+      - name: Run tests
+        run: npm run test
