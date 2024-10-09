@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Outlet } from 'react-router-dom';
 import './Main.scss'
 import Item from './menuItem/item';

@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { useQuery, gql } from '@apollo/client';
 import ThemeRoutes from './src/router/Routes';
 
 
