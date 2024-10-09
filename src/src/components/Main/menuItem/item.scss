@@ -1,0 +1,15 @@
+.item {
+     font-size: 18px;
+     background-color: cornflowerblue;
+     width: 70%;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     border-radius: 5px;
+     color: white;
+     cursor: pointer;
+     border: 0;
+}
+
+.item:hover {
+    background-color:rgb(127, 168, 243);
+}
