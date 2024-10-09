@@ -23,8 +23,4 @@ jobs:
       - name: build storybook
         run: npm run build:storybook
       - name: unit test
-        run: npm run test:unit
-      - name: e2e test
-        run: npm run test:e2e
-      - name: lint code
-        run: npm run lint
+        run: npm run test
