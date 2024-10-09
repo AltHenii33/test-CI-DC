@@ -22,7 +22,7 @@ const Item: FC<launchesPast> = ({ id, mission_name, launch_date_local, rocket_na
         <div key={id} className='itemPast' onClick={()=> navigate(`/LauchesPast/${id}`)}>
             <h5>{mission_name}</h5>
             <div>Ракета: {rocket_name}</div>
-            <img width='80px' height='80px' src={`${flickr_images}`} />
+            <img width='80px' height='80px' alt='' src={`${flickr_images}`} />
             <div>Дата: {moment(launch_date_local).format('ll')}</div>
         </div>
     );

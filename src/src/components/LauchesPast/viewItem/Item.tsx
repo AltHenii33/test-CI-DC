@@ -44,7 +44,7 @@ function LaunchItem() {
 
   return (
     <div className="vievItem">
-      {data?.launch.links.mission_patch_small && <img src={data?.launch.links.mission_patch_small} />}
+      {data?.launch.links.mission_patch_small && <img alt='' src={data?.launch.links.mission_patch_small} />}
       <h3>{data?.launch.mission_name}</h3>
       <p>Дата: {moment(data?.launch.launch_date_local).format('ll')}</p>
       <p>Ракета: {data?.launch.rocket.rocket_name}</p>
