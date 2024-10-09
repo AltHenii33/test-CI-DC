@@ -83,7 +83,7 @@ describe('USER TEST', () => {
       ]
     }
   })
-
+console.log('sdsd')
 
   test('Получение пользователей', async () => {
 
