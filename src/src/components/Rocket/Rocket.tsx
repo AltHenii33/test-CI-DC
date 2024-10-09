@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { useState } from 'react';
 import { useQuery, gql } from '@apollo/client';
 import './Rocket.scss';
 import Item from './RocketItem/item';
@@ -51,8 +51,8 @@ const GET_ROCKETS = gql`
 const PAGE_SIZE = 10;
 
 function Rocket() {
-  const [pag, setPag] = useState(0)
-  const { loading, error, data, fetchMore } = useQuery<RocketsData>(GET_ROCKETS, {
+  const [pag] = useState(0)
+  const { loading, error, data } = useQuery<RocketsData>(GET_ROCKETS, {
     variables: {
       limit: PAGE_SIZE + pag * PAGE_SIZE,
       offset: pag * PAGE_SIZE

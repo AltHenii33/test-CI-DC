@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { useState } from 'react';
 import { useQuery, gql } from '@apollo/client';
 import './LauchesPast.scss';
 import Item from './lauchPastItem/item';
@@ -42,8 +42,8 @@ const GET_LOCATIONS = gql`
 const PAGE_SIZE = 30;
 
 function LauchesPast() {
-    const [pag, setPag] = useState(0)
-    const { loading, error, data, fetchMore } = useQuery<RocketInventoryData>(GET_LOCATIONS, {
+    const [pag] = useState(0)
+    const { loading, error, data } = useQuery<RocketInventoryData>(GET_LOCATIONS, {
         variables: {
             limit: PAGE_SIZE + pag * PAGE_SIZE,
             offset: pag * PAGE_SIZE

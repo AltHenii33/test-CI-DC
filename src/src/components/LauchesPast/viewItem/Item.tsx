@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 import { useParams } from "react-router-dom";
 import moment from 'moment';
@@ -26,7 +26,6 @@ const GET_VIEW_ITEM = gql`
   }
 `;
 
-const launchId = "5eb87cdbffd86e000604b32c";
 
 function LaunchItem() {
   const { id } = useParams();
@@ -45,7 +44,7 @@ function LaunchItem() {
 
   return (
     <div className="vievItem">
-      {data?.launch.links.mission_patch_small && <img alt="None photo" src={data?.launch.links.mission_patch_small} />}
+      {data?.launch.links.mission_patch_small && <img alt='' src={data?.launch.links.mission_patch_small} />}
       <h3>{data?.launch.mission_name}</h3>
       <p>Дата: {moment(data?.launch.launch_date_local).format('ll')}</p>
       <p>Ракета: {data?.launch.rocket.rocket_name}</p>
